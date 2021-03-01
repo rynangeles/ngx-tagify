@@ -19,7 +19,7 @@ Check the demo site on how it works [https://rynangeles.github.io/ngx-tagify/](h
 
   
 
-This library has one dependency. [[tagify](https://yaireo.github.io/tagify/).
+This library has one dependency. [tagify](https://yaireo.github.io/tagify/).
 
   
 
@@ -37,7 +37,8 @@ This library is published in Github Packages.
   
 
 ### Import the module
-
+> app.module.ts
+```
 import { NgxTagifyModule } from  '@rynangeles/ngx-tagify';
 
   
@@ -53,7 +54,7 @@ NgxTagifyModule
 })
 
 export class AppModule { }
-
+```
   
 
 ## Usage
