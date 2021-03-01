@@ -123,6 +123,46 @@
           }
         }
       }
+    },
+    "ngx-tagify": {
+      "projectType": "library",
+      "root": "projects/ngx-tagify",
+      "sourceRoot": "projects/ngx-tagify/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/ngx-tagify/tsconfig.lib.json",
+            "project": "projects/ngx-tagify/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-tagify/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-tagify/src/test.ts",
+            "tsConfig": "projects/ngx-tagify/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-tagify/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-tagify/tsconfig.lib.json",
+              "projects/ngx-tagify/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "ngx-tagify-demo"
 }

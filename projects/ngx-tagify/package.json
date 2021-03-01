@@ -1,0 +1,23 @@
+{
+  "name": "@rynangeles/ngx-tagify",
+  "version": "0.0.1",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/rynangeles"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:rynangeles/ngx-tagify.git",
+    "directory": "@rynangeles/ngx-tagify"
+  },
+  "peerDependencies": {
+    "@angular/common": "^10.2.4",
+    "@angular/core": "^10.2.4"
+  },
+  "dependencies": {
+    "@yaireo/tagify": "^3.23.0",
+    "tslib": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/yaireo__tagify": "^3.22.0"
+  }
+}
