@@ -21,6 +21,7 @@ const TAGIFY_VALUE_ACCESSOR = {
 })
 export class NgxTagifyComponent implements AfterViewInit, ControlValueAccessor, OnDestroy {
   @Input() name: string;
+  @Input() placeholder: string;
   @Input() settings: TagifySettings;
   @Input() whitelist: Observable<Array<Object | String>>;
   @Input() required: boolean;
@@ -56,8 +57,12 @@ export class NgxTagifyComponent implements AfterViewInit, ControlValueAccessor, 
   }
 
   private initTagify(settings) {
-    this._tagify = new Tagify(this.eleRef.nativeElement, settings);
+    if(this.placeholder){
+      settings.placeholder = this.placeholder;
+    }
 
+    this._tagify = new Tagify(this.eleRef.nativeElement, settings);
+    
     this._tagify.on('input', (evt) => {
       this.value = this.tagifyValue;
       this.change.emit(evt);
